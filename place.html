@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Placing Place</title>
     <link
+      href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
@@ -17,11 +25,624 @@
   <body>
     <div class="container-fluid">
       <div class="row">
+        <div class="col-md-7" id="info-container">
+          <div id="info-welcome" class="info-content">
+            <h1>
+              <span class="placing">Placing</span><br />
+              <span class="places">Place</span>
+            </h1>
+            <div id="info-intro">
+              <p>
+                Placing 'Place' is a research project developed to explore the
+                philosophical concept of place through a combination of
+                geographic mapping and chronological timelines. More
+                specifically, the project aims to contextualize the influence of
+                place itself on various figures whose ideas have since proved
+                influential/symbolic of certain evolving notions of 'place'.
+              </p>
+              <button
+                onclick="fadeToNextInfoDiv('info-welcome', 'info-descartes')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Descartes
+              </button>
+            </div>
+          </div>
+          <div id="info-descartes" class="info-content">
+            <h1>
+              <span class="placing">Descartes</span><br />
+              <span class="places">(1596-1650)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>La Haye en Touraine: A Reflective Beginning (1596)</h3>
+              <p>
+                René Descartes' birth in the quiet town of La Haye en Touraine,
+                which would later bear his name, provided a stark contrast to
+                the bustling intellectual life he would lead. This contrast is
+                significant as it mirrors the duality present in his later
+                philosophical work, particularly the mind-body dualism. The
+                tranquil environment of his early years may have contributed to
+                his contemplative nature, allowing him the mental space to
+                question and reflect—a practice central to his method of doubt.
+                His introspective inclination, likely nurtured in this peaceful
+                setting, became a cornerstone of his philosophical approach,
+                emphasizing the need for an internal search for truth.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>
+                Jesuit Education at La Flèche: The Seeds of Methodical Inquiry
+              </h3>
+              <p>
+                Descartes' education at the Jesuit Collège Royal Henry-Le-Grand
+                in La Flèche was a formative period that equipped him with a
+                foundation in various disciplines, including mathematics, which
+                played a crucial role in his philosophical methodology. The
+                Jesuit emphasis on discipline and intellectual rigor is
+                reflected in Descartes' own methodical approach to philosophy.
+                His later development of the method of doubt and the insistence
+                on clear and distinct ideas can be traced back to the structured
+                and critical thinking skills honed during his education. The
+                Jesuit education's focus on questioning and critically engaging
+                with ideas likely spurred Descartes' break from the Aristotelian
+                tradition and his pursuit of a new philosophical framework.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>The Dutch Republic: A Haven for Free Thought</h3>
+              <p>
+                The liberal intellectual climate of the Dutch Republic played a
+                pivotal role in Descartes' philosophical development. The
+                relative freedom from religious and political persecution in the
+                Netherlands allowed Descartes to explore and communicate his
+                ideas with less fear of censorship. This freedom is reflected in
+                his bold challenges to established norms and his development of
+                a new vision of the natural world. The Dutch Republic's openness
+                to new scientific ideas provided a fertile environment for
+                Descartes to develop his natural philosophy, which reimagined
+                the physical world as a mechanistic system governed by universal
+                laws—a radical departure from the teleological explanations of
+                scholasticism.
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>
+                Military Service and the Thirty Years' War: The Quest for
+                Certainty
+              </h3>
+              <p>
+                Descartes' military service and the experiences he gained during
+                the Thirty Years' War exposed him to the instability and
+                uncertainty of human affairs. The chaotic backdrop of war likely
+                impressed upon him the need for a stable and indubitable
+                foundation for knowledge. This historical context is crucial for
+                understanding Descartes' philosophical quest for certainty. The
+                tumultuous times may have strengthened his resolve to find a
+                point of absolute certainty, which he famously articulated as
+                "Cogito, ergo sum" (I think, therefore I am). This quest can be
+                seen as a response to the era's pervasive doubt and conflict,
+                seeking to establish an unshakable ground for science and
+                philosophy.
+              </p>
+            </div>
+            <div class="sect-5">
+              <h3>
+                Cartesian Dualism and the Cogito: A Product of Personal Inquiry
+              </h3>
+              <p>
+                Descartes' philosophical innovations, such as Cartesian Dualism
+                and the cogito, can be viewed as direct outcomes of his life
+                experiences. The cogito, in particular, encapsulates the essence
+                of his method of doubt, which he may have developed as a way to
+                navigate the uncertainties he encountered throughout his life.
+                His dualistic separation of mind and body reflects a desire to
+                delineate the boundaries of human understanding clearly, perhaps
+                influenced by the clear demarcations and structures he
+                encountered in his early education.
+              </p>
+            </div>
+            <div class="sect-6">
+              <h3>Redefining Space and the Mechanistic Universe</h3>
+              <p>
+                Descartes' redefinition of 'place' as a matter of geometric
+                extension and his mechanistic view of the universe were
+                revolutionary ideas that challenged the traditional Aristotelian
+                view of space as a container for forms and substances. This
+                shift towards a quantitative understanding of space aligns with
+                the scientific spirit of the age, emphasizing measurement and
+                predictability. Descartes' experiences in the Dutch Republic,
+                with its emphasis on empirical observation and scientific
+                inquiry, likely played a role in shaping his mechanistic
+                conception of the universe.
+              </p>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="fadeToNextInfoDiv('info-descartes', 'info-locke')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Locke
+              </button>
+            </div>
+          </div>
+          <div id="info-locke" class="info-content">
+            <h1>
+              <span class="placing">Locke</span><br />
+              <span class="places">(1632-1704)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>Rural Beginnings and Labor's Role</h3>
+              <p>
+                Locke's formative years in Wrington, a rural town in Somerset,
+                provided him with direct exposure to agricultural life and the
+                labor involved in tilling the land. This empirical observation
+                of labor's transformative power on the natural world likely
+                influenced his later labor theory of property, which posits that
+                property ownership is justified through the exertion of labor
+                upon resources. The connection between Locke's early experiences
+                and his philosophical work is evident in his "Two Treatises of
+                Government," where he articulates that the fruits of one's labor
+                are rightfully one's own. This principle of labor conferring
+                rights to property was a significant departure from the
+                prevailing feudal norms of his time, where land ownership was
+                tied to birthright and nobility rather than individual effort.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>Oxford Education and the Royal Society</h3>
+              <p>
+                At Christ Church, Oxford, Locke encountered a traditional
+                education steeped in Aristotelian philosophy, which he found
+                lacking. His subsequent involvement with the Royal Society, an
+                institution dedicated to the empirical method and scientific
+                inquiry, shaped his approach to knowledge. Locke's empirical
+                philosophy, which emphasizes knowledge derived from sensory
+                experience and logical reasoning, extended to his understanding
+                of property rights. The idea that property can be empirically
+                understood through the observable actions of labor and the
+                subsequent ownership reflects the influence of Locke's academic
+                pursuits on his philosophical development.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>Exile and Political Reflection</h3>
+              <p>
+                Locke's time in the Netherlands coincided with significant
+                political strife in England. His exile provided a vantage point
+                from which to consider the nature of government and the rights
+                of individuals within a society. It was during this period that
+                Locke composed much of his "Two Treatises," advocating for a
+                government based on the consent of the governed. The political
+                volatility he witnessed underscored his stance that a legitimate
+                government must be accountable to its citizens. They
+                demonstrated the potential for societal restructuring and the
+                fluidity of political authority. Locke's personal involvement in
+                these historical moments reinforced his view that the people
+                have the authority to overthrow a government that fails to
+                protect their rights, a revolutionary idea that would echo
+                throughout subsequent generations.
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>Property Rights and Colonial Justification</h3>
+              <p>
+                Locke's theory of property rights, as a product of labor, also
+                served as a justification for European colonial expansion. His
+                argument that individuals have a natural right to property
+                acquired through their labor provided a rationale for the
+                appropriation of land in the New World. This justification must
+                be understood within the context of the era's imperial ambitions
+                and the need to rationalize the claim to territories inhabited
+                by others. Locke's labor theory provided a convenient framework
+                for European settlers to legitimize their claims over indigenous
+                lands.
+              </p>
+            </div>
+            <div class="sect-5">
+              <h3>Property, Government, and Individual Rights</h3>
+              <p>
+                Locke's philosophical contributions on property and governance
+                have left an indelible mark on the discourse of individual
+                rights and the role of the state. His work underpins modern
+                conceptions of property rights and has been instrumental in
+                shaping the political narrative on the interplay between
+                individuals and government. The historical and personal
+                experiences that informed Locke's philosophy are reflected in
+                the enduring relevance of his ideas.
+              </p>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="fadeToNextInfoDiv('info-locke', 'info-kant')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Kant
+              </button>
+            </div>
+          </div>
+          <div id="info-kant" class="info-content">
+            <h1>
+              <span class="placing">Kant</span><br />
+              <span class="places">(1724-1804)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>Kant's Königsberg: A Microcosm of Enlightenment Thought</h3>
+              <p>
+                Königsberg, a vibrant Prussian port city, was not just Kant's
+                home but also a reflection of the Enlightenment's ideals. The
+                city's cosmopolitan nature, with its bustling port and
+                university, exposed Kant to a confluence of ideas from across
+                Europe. This exposure is evident in Kant's openness to diverse
+                thoughts, mirroring the city's own cultural and intellectual
+                diversity. The University of Königsberg, where Kant spent his
+                academic life, was a crucible of Enlightenment ideas. It was
+                here that Kant encountered the works of Newton and Leibniz,
+                which spurred his critical examination of metaphysics and
+                natural philosophy.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>The Lisbon Earthquake: A Catalyst for Kantian Inquiry</h3>
+              <p>
+                The 1755 Lisbon earthquake was a transformative event for
+                Europe, and Kant's response to it demonstrates how external
+                events can shape philosophical inquiry. Kant's interest in
+                natural disasters, as mentioned in the Stanford Encyclopedia of
+                Philosophy, spurred him to question the human understanding of
+                such events, leading to his critical examination of reason and
+                the limits of human knowledge. This event, which shook the very
+                foundations of Enlightenment optimism, prompted Kant to explore
+                the relationship between human cognition and the natural world,
+                a theme that would become central to his philosophical system.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>Kant's Transcendental Idealism: Redefining 'Place'</h3>
+              <p>
+                Kant's transcendental idealism, a cornerstone of his philosophy,
+                reconceptualizes 'place' as a product of human cognition. Space
+                and time, as forms of intuition, structure our experiences,
+                suggesting that our understanding of 'place' is not merely a
+                passive absorption of sensory data but an active cognitive
+                process. This revolutionary idea, detailed in the Critique of
+                Pure Reason, reflects Kant's own intellectual environment in
+                Königsberg, where the exchange of ideas was not limited by
+                physical boundaries but was part of a broader intellectual
+                'place.'
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>The Contrast of Mobility and Influence</h3>
+              <p>
+                Kant's physical immobility, juxtaposed with the global reach of
+                his ideas, underscores the dual nature of 'place' in his life.
+                While Kant himself remained in Königsberg, his ideas traveled
+                far, influencing not only German Idealism but also later
+                phenomenologists and humanistic geographers. His work on spatial
+                cognition, as mentioned in the Wikipedia article, has been
+                recognized by figures such as the 19th-century logician Charles
+                Sanders Peirce, who emphasized the centrality of logic, which
+                for Kant was closely tied to his understanding of space and
+                time, to his entire philosophy.
+              </p>
+            </div>
+            <div class="sect-5">
+              <h3>
+                Kant's Legacy: Bridging Physical and Intellectual 'Places'
+              </h3>
+              <p>
+                Kant's enduring influence across disciplines attests to the
+                depth and breadth of his philosophical inquiry. His redefinition
+                of 'place' has resonated in fields as diverse as geography and
+                cognitive science. In geography, his impact is seen in the shift
+                towards examining human perception and experience of 'place.' In
+                cognitive science, his ideas inform our understanding of how
+                spatial information is processed and interpreted by the mind.
+              </p>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="fadeToNextInfoDiv('info-kant', 'info-heidegger')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Heidegger
+              </button>
+            </div>
+          </div>
+          <div id="info-heidegger" class="info-content">
+            <h1>
+              <span class="placing">Heidegger</span><br />
+              <span class="places">(1889-1976)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>Early Life and the Concept of Dwelling</h3>
+              <p>
+                Martin Heidegger's early life in the serene and conservative
+                town of Meßkirch deeply influenced his philosophical musings on
+                "dwelling" and "Being." Heidegger's childhood environment,
+                characterized by a close-knit relationship with nature and the
+                town's religious and traditional values, later manifested in his
+                philosophy as a call for a more profound and harmonious
+                existence with one's surroundings. This connection is not
+                coincidental; it is a direct reflection of the formative
+                influence of his upbringing. In his later works, Heidegger
+                explores the concept of dwelling beyond the mere act of living
+                in a place. He delves into what it means to exist authentically
+                within one's environment, a notion that becomes a recurring
+                theme in his philosophical journey.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>Academic Influences and the Development of Being and Time</h3>
+              <p>
+                Heidegger's academic tenure at the University of Freiburg and
+                the University of Marburg was instrumental in shaping his
+                philosophical inquiries. At Freiburg, the works of Brentano and
+                Aristotle, particularly Aristotle's exploration of the unity of
+                all modes of being in the Metaphysics, provided the spark that
+                ignited Heidegger's quest to understand the nature of Being. His
+                encounter with Husserl's phenomenology, which emphasized the
+                role of perception and experience, further refined his
+                philosophical direction. The intellectual milieu of Marburg,
+                where Heidegger's teaching was noted for its brilliance, was the
+                crucible in which "Being and Time" was forged.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>The Nazi Affiliation and Its Philosophical Dissonance</h3>
+              <p>
+                The dissonance between Heidegger's philosophical exploration of
+                being and his brief support of the Nazi Party's political
+                ideology is a contentious aspect of his biography. His
+                rectorship at the University of Freiburg and the integration of
+                Nazi rhetoric into his philosophical language during his
+                inaugural address reflect this tension. The post-war
+                denazification process, which barred Heidegger from teaching
+                until 1949, and his subsequent failure to fully repudiate
+                National Socialism, cast a shadow over his philosophical legacy.
+                This is particularly poignant when contrasted with his
+                meditations on place and belonging, which starkly oppose the
+                regime's distorted notions of homeland.
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>Ontological Investigations and the Critique of Technology</h3>
+              <p>
+                Heidegger's ontological investigations into the concept of
+                'place' are central to his philosophy. For him, 'place'
+                transcends geographic location, incorporating temporal and
+                existential dimensions that define our being. This viewpoint is
+                particularly evident in his critique of the alienation caused by
+                modern technology and his advocacy for a return to a more
+                authentic mode of dwelling. His concept of "enframing"
+                (Gestell), which critiques the modern technological worldview
+                that dominates nature, emphasizes the necessity for a respectful
+                and thoughtful engagement with our environment. This critique is
+                not an isolated philosophical exercise but stems from
+                Heidegger's personal confrontation with the rapid technological
+                changes of his time and the impact on the traditional life he
+                valued.
+              </p>
+            </div>
+            <div class="sect-5">
+              <h3>Philosophical Debates and Cultural Shifts</h3>
+              <p>
+                The intellectual environments of Freiburg and Marburg were more
+                than mere settings for Heidegger's academic pursuits; they were
+                the stages for pivotal philosophical debates. It was within
+                these academic institutions that Heidegger developed his ideas
+                on pre-reflective experience and the critique of Cartesianism,
+                contributing to significant cultural and intellectual shifts in
+                the 20th century. These ideas did not emerge in a vacuum but
+                were influenced by the philosophical currents and academic
+                dialogues that Heidegger was immersed in during his formative
+                years as a scholar.
+              </p>
+            </div>
+            <div class="sect-6">
+              <h3>Impact on Existentialism and Environmental Philosophy</h3>
+              <p>
+                Heidegger's reflections on place and dwelling have had a
+                profound impact on various fields, including existentialism,
+                phenomenology, and environmental philosophy. His insights prompt
+                us to reconsider notions of identity, community, and the
+                individual's relationship with the environment. These themes
+                resonate in contemporary discussions on nationalism, cultural
+                heritage, and environmental policy, showcasing the far-reaching
+                implications of his work. The connection between Heidegger's
+                personal experiences and his philosophical output is evident in
+                the way his ideas continue to influence and provoke thought in
+                these areas.
+              </p>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="fadeToNextInfoDiv('info-heidegger', 'info-mignolo')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Mignolo
+              </button>
+            </div>
+          </div>
+          <div id="info-mignolo" class="info-content">
+            <h1>
+              <span class="placing">Mignolo</span><br />
+              <span class="places">(1941-Present)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>Formative Influences from South America</h3>
+              <p>
+                Walter Mignolo's philosophical exploration of 'place' is deeply
+                intertwined with his personal history and cultural background.
+                Born in Argentina, Mignolo's South American roots provided him
+                with firsthand experience of the region's complex colonial
+                legacy, which is a recurring theme in his work. This early
+                exposure to the multifaceted narratives of identity, culture,
+                and power in Latin America laid the groundwork for his later
+                academic pursuits. The region's history of colonialism,
+                indigenous resistance, and the struggle for cultural sovereignty
+                became central to his understanding of 'place' and its
+                significance in the global matrix of knowledge and power.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>Cultural and Political Movements</h3>
+              <p>
+                Significant cultural and political movements, such as the rise
+                of postcolonial and decolonial thought during Mignolo's
+                formative years as a scholar, have also left an indelible mark
+                on his work. These movements, which seek to redress the
+                imbalances of power and cultural hegemony resulting from
+                colonialism, emphasize the centrality of 'place' as a locus of
+                resistance and identity reclamation. Mignolo's engagement with
+                these ideas is evident in his advocacy for a decolonial approach
+                to knowledge production, which respects the multiplicity of
+                'places' and their unique contributions to global understanding.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>Global Engagements and Diverse Perspectives</h3>
+              <p>
+                Mignolo's extensive travels and academic engagements across
+                continents have exposed him to a wide array of perspectives on
+                'place.' His interactions with scholars and activists from
+                various cultural backgrounds have enriched his understanding of
+                'place' as a complex interplay of local and global histories.
+                This exposure has reinforced his belief in the need to consider
+                'place' within any philosophical discourse, especially when
+                addressing issues of knowledge and power.
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>
+                Synthesis of Personal Experience and Philosophical Inquiry
+              </h3>
+              <p>
+                In synthesizing his personal experiences with his philosophical
+                inquiries, Mignolo's work on 'place' becomes a testament to the
+                power of one's origins and life journey in shaping intellectual
+                pursuits. His South American heritage, European education, and
+                engagement with critical cultural movements have all converged
+                to inform his philosophy. Mignolo's work is a reflection of a
+                life lived across 'places,' each with its own story and each
+                contributing to a richer, more nuanced understanding of the
+                world.
+              </p>
+            </div>
+            <div class="button-container">
+              <button
+                onclick="fadeToNextInfoDiv('info-mignolo', 'info-cronon')"
+                class="btn btn-primary explore-button"
+              >
+                Go to Cronon
+              </button>
+            </div>
+          </div>
+          <div id="info-cronon" class="info-content">
+            <h1>
+              <span class="placing">Cronon</span><br />
+              <span class="places">(1954-Present)</span>
+            </h1>
+            <div class="sect-1">
+              <h3>
+                Early Environmental Encounters: Early Years in Connecticut
+              </h3>
+              <p>
+                William Cronon's intellectual trajectory was likely influenced
+                by his early experiences in the varied landscapes of
+                Connecticut. The historical progression from untouched
+                wilderness to colonial settlements and eventually to
+                industrialized zones would have provided Cronon with a living
+                tableau of environmental change. This progression in his home
+                state serves as a microcosm of the broader American experience
+                of land use, which Cronon later explores in his work. The
+                contrast between the natural world and the built environment,
+                witnessed firsthand, could have sparked his initial interest in
+                the narratives that intertwine human actions with the natural
+                world, setting the stage for his future exploration of 'place'.
+              </p>
+            </div>
+            <div class="sect-2">
+              <h3>Academic Foundations: Yale and Oxford</h3>
+              <p>
+                Cronon's time at Yale University immersed him in the study of
+                American landscapes, a theme that would become central to his
+                scholarship. Yale's intellectual environment, rich in American
+                historical studies, would have provided Cronon with the tools to
+                begin dissecting the complex layers of human interaction with
+                the environment. His subsequent tenure at Oxford would have
+                contrasted and expanded upon his Yale education, exposing him to
+                European landscapes and intellectual traditions. This
+                transatlantic academic experience allowed Cronon to develop a
+                comparative perspective on 'place', enhancing his ability to
+                analyze environmental narratives from a diverse array of
+                cultural and historical contexts.
+              </p>
+            </div>
+            <div class="sect-3">
+              <h3>
+                Engaging with Environmentalism: University of Wisconsin-Madison
+              </h3>
+              <p>
+                At the University of Wisconsin-Madison, Cronon's academic
+                pursuits intersected with the burgeoning environmental movement.
+                His engagement with conservation organizations such as the Trust
+                for Public Land and the Wilderness Society would have deepened
+                his appreciation of 'place' as an active participant in human
+                history. Through these experiences, Cronon would have gained
+                practical insights into the political and social dynamics of
+                land use and conservation, enriching his theoretical framework
+                with real-world applications and a sense of urgency about
+                environmental issues.
+              </p>
+            </div>
+            <div class="sect-4">
+              <h3>Midwest Environmental History: A Living Laboratory</h3>
+              <p>
+                The environmental history of the Midwest, with its mixture of
+                indigenous land stewardship, European colonization, agricultural
+                expansion, and urban development, provided Cronon with a rich
+                empirical foundation for his work. The region's transformation
+                from prairie to farmland to urban center exemplified the themes
+                of change and adaptation that Cronon would later theorize. The
+                Midwest's story of environmental and human interaction became a
+                living laboratory for Cronon, informing his understanding of
+                'place' as a nexus of ecological and human narratives.
+              </p>
+            </div>
+            <div class="sect-5">
+              <h3>'Nature's Metropolis': Rethinking Urban-Rural Connections</h3>
+              <p>
+                In "Nature's Metropolis," Cronon challenges the traditional
+                frontier narrative by exploring the reciprocal development of
+                Chicago and the Great West. This work reflects his experiences
+                in the Midwest, where he observed firsthand the transformation
+                of the landscape. Cronon's analysis in "Nature's Metropolis"
+                suggests that 'place' is not merely a setting for human activity
+                but a co-creator of history, shaped by and shaping the flow of
+                commodities, people, and ideas between urban and rural areas.
+              </p>
+            </div>
+            <div class="sect-6">
+              <h3>
+                The Concept of 'Second Nature': Human and Natural Interweaving
+              </h3>
+              <p>
+                Cronon's concept of 'second nature' builds upon his personal and
+                academic experiences, proposing that 'place' comprises layers of
+                natural and human elements. This idea encapsulates Cronon's
+                belief that human activity is not separate from nature but is an
+                integral part of it, adding cultural, economic, and ecological
+                dimensions to the natural world. The concept of 'second nature'
+                is a testament to Cronon's nuanced view of 'place' as a
+                palimpsest, reflecting the continuous interplay between the
+                environment and human agency.
+              </p>
+            </div>
+          </div>
+        </div>
         <div class="col-md-5" id="map-container">
           <div id="mapid"></div>
-        </div>
-        <div class="col-md-7" id="info-container">
-          <div id="info"></div>
         </div>
       </div>
       <div class="row">
@@ -30,7 +651,6 @@
         </div>
       </div>
     </div>
-
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

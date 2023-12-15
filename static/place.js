@@ -155,7 +155,7 @@ var philosopherTimelines = {
         year: 1618,
         description: "Military service, traveling through Europe.",
         placeName: "Battle of White Mountain, Bohemia",
-        coords: [44.164841161477405, -71.43084073895686]
+        coords: [50.11749618299872, 14.374236539769871]
       },
       {
         year: 1619,
@@ -269,7 +269,7 @@ var philosopherTimelines = {
     ]
   }
 };
-var map = L.map("mapid").setView([20, 0], 2);
+var map = L.map("mapid").setView([29.459957748902866, -31.256527399058214], 3);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution:
@@ -288,7 +288,7 @@ function addMarkersToMap(philosopherTimelines, mapInstance) {
       labels.push(
         '<div class="phil-legend"><i style="background:' +
           philosopherTimelines[philosopher].color +
-          '; width: 18px; height: 18px; float: left; margin-right: 8px; opacity: 0.7;"></i>' +
+          '; width: 12px; height: 12px; float: left; margin-right: 3px; opacity: 0.7;"></i>' +
           philosopher +
           "</div>"
       );
@@ -307,11 +307,22 @@ function addMarkersToMap(philosopherTimelines, mapInstance) {
         fillColor: philosopherTimelines[philosopher].color,
         fillOpacity: 0.5,
         radius: 8
-      }).addTo(mapInstance);
+      }).addTo(mapInstance); // Correct placement of addTo
+
+      marker._path.setAttribute("data-philosopher", philosopher);
 
       marker.bindPopup(
-        "<strong>" + event.placeName + "</strong>: " + event.description
+        "<strong>" +
+          philosopher +
+          "</strong>: " +
+          event.placeName +
+          " - " +
+          event.description
       );
+
+      marker.on("click", function (e) {
+        showInfo(philosopher);
+      });
     });
   });
 }
@@ -344,7 +355,7 @@ function createTimeline(philosopherTimelines) {
       parseInt(d3.select("#timeline").style("width"), 10) -
       margin.left -
       margin.right,
-    height = 250 - margin.top - margin.bottom;
+    height = 200 - margin.top - margin.bottom;
 
   var svg = d3
     .select("#timeline")
@@ -410,6 +421,10 @@ function createTimeline(philosopherTimelines) {
     .enter()
     .append("circle")
     .attr("class", "event-dot")
+    .attr("data-philosopher", function (d) {
+      return d.philosopher;
+    })
+
     .attr("cx", function (d) {
       return x(d.year);
     })
@@ -423,7 +438,14 @@ function createTimeline(philosopherTimelines) {
     .on("mouseover", function (event, d) {
       tooltip.transition().duration(200).style("opacity", 0.9);
       tooltip
-        .html("<strong>" + d.philosopher + "</strong><br>" + d.description)
+        .html(
+          "<strong>" +
+            d.philosopher +
+            " (" +
+            d.year +
+            ")</strong><br>" +
+            d.description
+        ) // Include the year here
         .style("left", event.pageX + "px")
         .style("top", event.pageY - 28 + "px");
     })
@@ -437,9 +459,90 @@ function createTimeline(philosopherTimelines) {
           duration: 1.5
         });
       }
+    })
+    .on("click", function (event, d) {
+      showInfo(d.philosopher);
     });
+}
+
+function showInfo(philosopher) {
+  // Hide all philosopher info divs
+  var infoDivs = document.querySelectorAll(".info-content");
+  infoDivs.forEach(function (div) {
+    div.style.display = "none";
+  });
+
+  // Remove glow from all markers
+  var allMarkers = document.querySelectorAll(
+    ".leaflet-interactive, .event-dot"
+  );
+  allMarkers.forEach(function (marker) {
+    marker.classList.remove("marker-glow");
+  });
+
+  // Show the div corresponding to the clicked philosopher
+  var infoId = "info-" + philosopher.toLowerCase();
+  var infoDivToShow = document.getElementById(infoId);
+  if (infoDivToShow) {
+    infoDivToShow.style.display = "block";
+
+    // Add glow to markers for the active philosopher
+    document
+      .querySelectorAll(
+        '.leaflet-interactive[data-philosopher="' +
+          philosopher +
+          '"], .event-dot[data-philosopher="' +
+          philosopher +
+          '"]'
+      )
+      .forEach(function (marker) {
+        marker.classList.add("marker-glow");
+      });
+  } else {
+    // If the philosopher div is not found, show the welcome div
+    document.getElementById("info-welcome").style.display = "block";
+  }
 }
 
 window.onload = window.onresize = function () {
   createTimeline(philosopherTimelines);
 };
+
+function fadeToNextInfoDiv(currentDivId, nextDivId) {
+  var currentDiv = document.getElementById(currentDivId);
+  var nextDiv = document.getElementById(nextDivId);
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+  }
+
+  var philosopher = capitalizeFirstLetter(nextDivId.replace("info-", ""));
+  console.log(philosopher);
+  currentDiv.classList.add("fade-out");
+
+  // Remove glow from all markers
+  var allMarkers = document.querySelectorAll(
+    ".leaflet-interactive, .event-dot"
+  );
+  allMarkers.forEach(function (marker) {
+    marker.classList.remove("marker-glow");
+  });
+
+  setTimeout(function () {
+    currentDiv.style.display = "none";
+    nextDiv.style.display = "block";
+    currentDiv.classList.remove("fade-out");
+
+    document
+      .querySelectorAll(
+        '.leaflet-interactive[data-philosopher="' +
+          philosopher +
+          '"], .event-dot[data-philosopher="' +
+          philosopher +
+          '"]'
+      )
+      .forEach(function (marker) {
+        marker.classList.add("marker-glow");
+      });
+  }, 500); // This timeout should match the duration of the fade-out animation
+}
