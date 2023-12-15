@@ -1,8 +1,71 @@
-#mapid {
-  height: 500px; /* Adjust height as needed */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
+
+.container-fluid {
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.row:first-child {
+  flex: 1;
+  display: flex;
+  margin: 0;
+  min-height: 0;
+}
+
+#map-container {
+  flex-grow: 1;
+  height: auto;
+}
+
+#mapid {
+  height: 100%;
+  width: 100%;
+}
+
+#info {
+}
+
 #timeline {
-  height: 100px; /* Set the height of the timeline */
-  background-color: #f2f2f2; /* Give it a background color to distinguish it from the rest of the page */
-  margin-top: 20px; /* Add some space above the timeline */
+  background-color: #f2f2f2;
+}
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+div.info.legend.leaflet-control {
+  padding: 6px 8px;
+  font:
+    14px/16px Arial,
+    Helvetica,
+    sans-serif;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
 }
